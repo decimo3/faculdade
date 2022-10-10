@@ -1,0 +1,14 @@
+version: '3'
+services:
+  php:
+    image: 'php:7.4-apache'
+    container_name: Apache
+    restart: always
+    ports:
+     - "8080:80"
+     - "4433:443"
+    expose:
+     - '8080'
+     - '4433'
+    volumes:
+     - .:/var/www/html

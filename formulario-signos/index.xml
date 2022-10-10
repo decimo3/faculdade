@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<zodiaco>
+	<signo><!-- Áries -->
+		<dataInicio>21/03</dataInicio>
+		<dataFim>20/04</dataFim>
+		<signoNome>Áries</signoNome>
+		<descricao>"Trabalhador Agrário", o deus Dumuzi</descricao>
+	</signo>
+	<signo><!-- Touro -->
+		<dataInicio>21/04</dataInicio>
+		<dataFim>20/05</dataFim>
+		<signoNome>Touro</signoNome>
+		<descricao>Boi Divino do Céu</descricao>
+	</signo>
+	<signo><!-- Gemini -->
+		<dataInicio>21/05</dataInicio>
+		<dataFim>21/06</dataFim>
+		<signoNome>Gemini</signoNome>
+		<descricao>Grandes Gêmeos, castor e pólux</descricao>
+	</signo>
+	<signo><!-- Cancer -->
+		<dataInicio>21/06</dataInicio>
+		<dataFim>21/07</dataFim>
+		<signoNome>Cancer</signoNome>
+		<descricao>Lagostim</descricao>
+	</signo>
+	<signo><!-- Leão -->
+		<dataInicio>23/07</dataInicio>
+		<dataFim>23/08</dataFim>
+		<signoNome>Leo</signoNome>
+		<descricao>Leão</descricao>
+	</signo>
+	<signo><!-- Virgem -->
+		<dataInicio>23/08</dataInicio>
+		<dataFim>23/09</dataFim>
+		<signoNome>Virgo</signoNome>
+		<descricao>"O Sulco", a espiga de grãos da deusa Shala</descricao>
+	</signo>
+	<signo><!-- Libra -->
+		<dataInicio>23/09</dataInicio>
+		<dataFim>23/10</dataFim>
+		<signoNome>Libra</signoNome>
+		<descricao>Balança</descricao>
+	</signo>
+	<signo><!-- Scorpio -->
+		<dataInicio>23/10</dataInicio>
+		<dataFim>22/11</dataFim>
+		<signoNome>Scorpio</signoNome>
+		<descricao>Escorpião</descricao>
+	</signo>
+	<signo><!-- Sagittarius -->
+		<dataInicio>23/11</dataInicio>
+		<dataFim>22/12</dataFim>
+		<signoNome>Sagittarius</signoNome>
+		<descricao>Soldado</descricao>
+	</signo>
+	<signo><!-- Capricornus -->
+		<dataInicio>22/12</dataInicio>
+		<dataFim>20/01</dataFim>
+		<signoNome>Capricornus</signoNome>
+		<descricao>Peixe-Cabra, o deus Enqui</descricao>
+	</signo>
+	<signo><!-- Aquarius -->
+		<dataInicio>20/01</dataInicio>
+		<dataFim>19/02</dataFim>
+		<signoNome>Aquarius</signoNome>
+		<descricao>Jarro</descricao>
+	</signo>
+	<signo><!-- Pisces -->
+		<dataInicio>19/02</dataInicio>
+		<dataFim>21/03</dataFim>
+		<signoNome>Pisces</signoNome>
+		<descricao>"Cauda da Andorinha" ou "Cordão de Peixe"</descricao>
+	</signo>
+</zodiaco>
