@@ -26,7 +26,7 @@
 	</signo>
 	<signo><!-- Gemini -->
 		<dataInicio>21/05</dataInicio>
-		<dataFim>21/06</dataFim>
+		<dataFim>20/06</dataFim>
 		<signoNome>Gemini</signoNome>
 		<descricao>
 			Os geminianos são extrovertidos e amigões!
@@ -38,7 +38,7 @@
 	</signo>
 	<signo><!-- Cancer -->
 		<dataInicio>21/06</dataInicio>
-		<dataFim>21/07</dataFim>
+		<dataFim>22/07</dataFim>
 		<signoNome>Cancer</signoNome>
 		<descricao>
 			A principal marca dos cancerianos é a sensibilidade e o carinho.
@@ -50,7 +50,7 @@
 	</signo>
 	<signo><!-- Leão -->
 		<dataInicio>23/07</dataInicio>
-		<dataFim>23/08</dataFim>
+		<dataFim>22/08</dataFim>
 		<signoNome>Leo</signoNome>
 		<descricao>
 			Os leoninos são vaidosos e confiantes.
@@ -62,7 +62,7 @@
 	</signo>
 	<signo><!-- Virgem -->
 		<dataInicio>23/08</dataInicio>
-		<dataFim>23/09</dataFim>
+		<dataFim>22/09</dataFim>
 		<signoNome>Virgo</signoNome>
 		<descricao>
 			Organizados e analíticos: esses são os virginianos.
@@ -73,7 +73,7 @@
 	</signo>
 	<signo><!-- Libra -->
 		<dataInicio>23/09</dataInicio>
-		<dataFim>23/10</dataFim>
+		<dataFim>22/10</dataFim>
 		<signoNome>Libra</signoNome>
 		<descricao>
 			Clichê dizer, mas o equilíbrio e a justiça definem os librianos.
@@ -84,7 +84,7 @@
 	</signo>
 	<signo><!-- Scorpio -->
 		<dataInicio>23/10</dataInicio>
-		<dataFim>22/11</dataFim>
+		<dataFim>21/11</dataFim>
 		<signoNome>Scorpio</signoNome>
 		<descricao>
 			Atraente e intenso: esse é o escorpiano.
@@ -94,8 +94,8 @@
 		</descricao>
 	</signo>
 	<signo><!-- Sagittarius -->
-		<dataInicio>23/11</dataInicio>
-		<dataFim>22/12</dataFim>
+		<dataInicio>22/11</dataInicio>
+		<dataFim>21/12</dataFim>
 		<signoNome>Sagittarius</signoNome>
 		<descricao>
 			Independência e liberdade marcam os sagitarianos.
@@ -116,7 +116,7 @@
 		</descricao>
 	</signo>
 	<signo><!-- Aquarius -->
-		<dataInicio>20/01</dataInicio>
+		<dataInicio>21/01</dataInicio>
 		<dataFim>19/02</dataFim>
 		<signoNome>Aquarius</signoNome>
 		<descricao>
@@ -127,8 +127,8 @@
 		</descricao>
 	</signo>
 	<signo><!-- Pisces -->
-		<dataInicio>19/02</dataInicio>
-		<dataFim>21/03</dataFim>
+		<dataInicio>20/02</dataInicio>
+		<dataFim>20/03</dataFim>
 		<signoNome>Pisces</signoNome>
 		<descricao>
 			Emocionais e espiritualizados, esses são os piscianos.
