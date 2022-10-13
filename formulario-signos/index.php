@@ -21,6 +21,10 @@
 </header>
   <section class="container">
   	<?php
+      if (empty($_GET["mes"]) || empty($_GET["dia"])) {
+        echo '<script>location.href="./index.html";</script>';
+        exit();
+      } else {
   		$xml = simplexml_load_file('index.xml');
       $diaAtual = intval(date("z", strtotime("{$_GET["mes"]}/{$_GET["dia"]}"))+1);
   		foreach($xml->signo as $constelacao):
