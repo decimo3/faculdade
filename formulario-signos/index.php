@@ -27,17 +27,22 @@
           echo '<img src="./images/' . $constelacao->signoNome . '.jpg" class="img-fluid">'; //
           echo '</div>';
           echo '<div class="col-8">';
-          echo '<p>Signo: ' . $constelacao->signoNome . '</p>';
-          echo '<p>Descrição: ' . $constelacao->descricao . '</p>';
+          echo '<p><b>Signo:</b> ' . $constelacao->signoNome . '</p>';
+          echo '<p><b>Descrição:</b> ' . $constelacao->descricao . '</p>';
           echo '</div>';
         }
   		endforeach;
   	?>
   </section>
   <footer class="border-top bg-white my-2">
-    <p>
-    Imagem de fundo de <a href="https://pixabay.com/pt/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=160494">OpenClipart-Vectors</a> por <a href="https://pixabay.com/pt//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=160494">Pixabay</a>
-    </p>
+    <ul>
+      <li>Datas dos signos retiradas do site: <a href="https://astrologialuzesombra.com.br/datas-dos-signos-do-zodiaco/">Datas dos signos do Zodíaco e suas características - Astrologia Luz e Sombra</a></li>
+      <li>Descrição dos signos retiradas do site: <a href="https://www.mapadomeuceu.com.br/blog/a-personalidade-dos-signos/">A personalidade dos signos - Mapa Do Céu</a></li>
+      <li>Imagem dos signos retiradas do site: <a href="https://querobolsa.com.br/revista/signos-no-trabalho">Signos no trabalho: saiba como é o perfil profissional de cada signo do zodíaco - QueroBolsa</a></li>
+      <li>Imagem citada na referencia anterior foi "cortada" pela ferramenta online: <a href="https://pinetools.com/split-image">SPLIT IMAGE ONLINE - PINETOOLS</a></li>
+      <li>Configuração do ambiente com Docker Compose retirada do artigo: <a href="https://cursos.alura.com.br/forum/topico-criar-um-container-com-apache-e-php-105728">Criar um container com apache e php - Alura Fórum</a></li>
+      <li>Método de inserção de html dentro do documento xml através do artigo: <a href="https://stackoverflow.com/questions/4412395/is-it-possible-to-insert-html-content-in-xml-document">Is it possible to insert HTML content in XML document? - stackoverflow</a></li>
+    </ul>
   </footer>
 </body>
 </html>
