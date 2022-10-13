@@ -16,7 +16,6 @@
   	<?php
   		$xml = simplexml_load_file('index.xml');
       $diaAtual = intval(date("z", strtotime("{$_GET["mes"]}/{$_GET["dia"]}"))+1);
-      echo intval(date("z", strtotime("12/22"))+1); // blablablablabla
   		foreach($xml->signo as $constelacao):
         list($diaInicio, $mesInicio) = explode("/", $constelacao->dataInicio);
         list($diaFinal, $mesFinal) = explode("/", $constelacao->dataFim);
