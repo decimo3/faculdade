@@ -21,8 +21,7 @@
         list($diaFinal, $mesFinal) = explode("/", $constelacao->dataFim);
         $diaInicio = intval(date("z", strtotime("{$mesInicio}/{$diaInicio}"))+1);
         $diaFinal = intval(date("z", strtotime("{$mesFinal}/{$diaFinal}"))+1);
-        // echo '<p> ' . $diaAtual . ', ' . $diaInicio . ', ' . $diaFinal . '</p>';
-        if (($diaAtual >= $diaInicio) && ($diaAtual <= $diaFinal) || ($diaAtual >= $diaInicio) || ($diaAtual <= $diaFinal)) {
+        if (($diaAtual >= $diaInicio) && ($diaAtual <= $diaFinal) || ($constelacao->signoNome == 'Capricornus' && (($diaAtual >= $diaInicio) || ($diaAtual <= $diaFinal)))) {
           echo '<div class="row border border-dark rounded my-2 p-3 img-responsive">';
           echo '<div class="col-4">';
           echo '<img src="./images/' . $constelacao->signoNome . '.jpg" class="img-fluid">'; //
