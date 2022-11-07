@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Aplicacao</string>
+    <string name="solicitar_camera">Solicitar Acesso a câmera</string>
+</resources>
