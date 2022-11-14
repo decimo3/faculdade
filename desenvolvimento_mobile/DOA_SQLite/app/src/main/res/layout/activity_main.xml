@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,7 +12,6 @@
         android:layout_height="wrap_content"
         android:text="Hello World!"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/nome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,10 +24,42 @@
         android:inputType="textPersonName|textEmailAddress"
         android:minHeight="48dp"
         android:singleLine="true"
-        app:layout_constraintBottom_toTopOf="@+id/telefone"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/telefone"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/saudacao" />
+        app:layout_constraintTop_toBottomOf="@+id/saudacao" />
+
+    <Button
+        android:id="@+id/inserir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="inserir"
+        app:layout_constraintEnd_toStartOf="@+id/exibir"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/excluir"
+        app:layout_constraintTop_toBottomOf="@+id/nome" />
+
+    <Button
+        android:id="@+id/excluir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excluir"
+        app:layout_constraintEnd_toStartOf="@+id/inserir"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nome" />
+
+    <Button
+        android:id="@+id/exibir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exibir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/inserir"
+        app:layout_constraintTop_toBottomOf="@+id/nome" />
 
     <EditText
         android:id="@+id/telefone"
@@ -39,20 +69,28 @@
         android:inputType="phone"
         android:minHeight="48dp"
         android:singleLine="true"
-        app:layout_constraintBottom_toTopOf="@+id/inserir"
+        android:textAlignment="center"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/nome" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/nome"
+        app:layout_constraintTop_toBottomOf="@+id/saudacao" />
 
-    <Button
-        android:id="@+id/inserir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="inserir"
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="346dp"
+        android:layout_height="368dp"
+        android:background="#A6DD67"
+        android:text="Resultado"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/telefone" />
+        app:layout_constraintTop_toBottomOf="@+id/inserir" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
