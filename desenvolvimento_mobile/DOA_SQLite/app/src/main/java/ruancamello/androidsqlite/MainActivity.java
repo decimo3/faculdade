@@ -3,13 +3,11 @@ package ruancamello.androidsqlite;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,20 +23,27 @@ public class MainActivity extends AppCompatActivity {
         Button mButtonInserir = findViewById(R.id.inserir);
         mButtonInserir.setOnClickListener(v -> inserir());
         Button mButtonConsultar = findViewById(R.id.exibir);
-        mButtonConsultar.setOnClickListener(v -> consultar());
+        mButtonConsultar.setOnClickListener(v -> atualizarResultado());
         Button mButtonExcluir = findViewById(R.id.excluir);
         mButtonExcluir.setOnClickListener(v -> eliminar());
+        atualizarResultado();
     }
     public void inserir(){
         String nome = mEditTextNome.getText().toString();
         String telefone = mEditTextTelefone.getText().toString();
         if ((!nome.isEmpty()) && (!telefone.isEmpty())) {
-            Cliente cliente = new Cliente(nome, telefone);
-            DOA.inserirCliente(MainActivity.this, cliente);
-            atualizarResultado("Cliente atualizado com sucesso!");
+            if (DOA.existeCliente(MainActivity.this, nome)) {
+                Toast.makeText(this, "Cliente já está cadastrada!", Toast.LENGTH_LONG).show();
+            } else {
+                Cliente cliente = new Cliente(nome, telefone);
+                DOA.inserirCliente(MainActivity.this, cliente);
+                Toast.makeText(this, "Cliente inserido com sucesso!", Toast.LENGTH_LONG).show();
+                atualizarResultado();
+            }
+
         }
     }
-    public void consultar(){
+    public void atualizarResultado(){
         List<Cliente> mClienteList;
         mClienteList = DOA.pesquisarCliente(MainActivity.this);
         StringBuilder mensagem = new StringBuilder();
@@ -49,25 +54,23 @@ public class MainActivity extends AppCompatActivity {
             mensagem.append(cliente.getNome());
             mensagem.append("\n");
         }
-        atualizarResultado(mensagem.toString());
+        mTextResultado.setText(mensagem);
+        Toast.makeText(this, "Atualizado!", Toast.LENGTH_LONG).show();
     }
     public void eliminar(){
         String nome = mEditTextNome.getText().toString();
         if (nome.isEmpty()) {
-            atualizarResultado(String.format("Foram excluídos %d contatos!", DOA.eliminarCliente(MainActivity.this)));
+            String mensagem = String.format("Foram excluídos %d contatos!", DOA.eliminarCliente(MainActivity.this));
+            Toast.makeText(this, mensagem, Toast.LENGTH_LONG).show();
         } else {
-            Cliente cliente = DOA.pesquisarCliente(MainActivity.this, nome);
-            atualizarResultado(String.format("Foram excluídos %d contatos!", DOA.eliminarCliente(MainActivity.this, cliente)));
+            if (DOA.existeCliente(MainActivity.this, nome)) {
+                Cliente cliente = DOA.pesquisarCliente(MainActivity.this, nome);
+                String mensagem = String.format("Foram excluídos %d contatos!", DOA.eliminarCliente(MainActivity.this, cliente));
+                Toast.makeText(this, mensagem, Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Cliente informado não existe!", Toast.LENGTH_LONG).show();
+            }
         }
-    }
-    private void atualizarResultado (String menssage) {
-        Toast.makeText(this, menssage, Toast.LENGTH_LONG).show();
-        if (!menssage.isEmpty()) {
-            mTextResultado.setText(menssage);
-            mTextResultado.setVisibility(View.VISIBLE);
-        } else {
-            mTextResultado.setText("");
-            mTextResultado.setVisibility(View.INVISIBLE);
-        }
+        atualizarResultado();
     }
 }
