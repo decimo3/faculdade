@@ -114,4 +114,18 @@ public class DOA {
         cursor.close();
         return cliente;
     }
+    public static Boolean existeCliente(Context context, String nome) {
+        // Criamos uma instância da classe do banco de dados
+        BancoDeDadosSQLite bancoDeDadosSQLite = new BancoDeDadosSQLite(context);
+        // Recuperamos um objeto para ler do banco de dados
+        SQLiteDatabase sqLiteDatabase = bancoDeDadosSQLite.getReadableDatabase();
+        // Responsável por definir a cláusula WHERE
+        String where = "nome = ?";
+        // Declara um vetor de Strings
+        String[] nomes = {nome};
+        Cursor cursor = sqLiteDatabase.query("Cliente", null, where, nomes, null, null, null);
+        int qnt = cursor.getCount();
+        cursor.close();
+        return (qnt > 0);
+    }
 }
